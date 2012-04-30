@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <title>Slivr</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="Slivr">
+	    <meta name="author" content="William Hockey and Zach Perret">
+
+	        <link rel="stylesheet" href="@{'/public/stylesheets/bootstrap.css'}">
+
+	        <style type="text/css">
+		      body {
+		        padding-top: 60px;
+		        padding-bottom: 40px;
+		      }
+		    </style>
+
+
+			<script src="@{'/public/javascripts/jquery-1.7.2.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+			<script src="@{'/public/javascripts/scroll.js'}"></script>
+
+			<script language=JavaScript>
+			function swapImage() {
+			theImages = new Array(
+			"/public/images/lillyback.jpg", 
+			"/public/images/lillyback.jpg", 
+			"/public/images/lillyback.jpg");
+
+			whichImage = Math.floor(Math.random()*theImages.length);
+			document.write('<img src="' +theImages[whichImage]+ '">');
+
+			}
+			</script>
+
+			#{get 'moreScripts' /}
+
+			<script language=jQuery>
+				$("#body").scroll( function() {
+				    var value = $(this).scrollTop();
+				  if ( value > 120 )
+
+
+				});​
+			</script>	
+
+	    </head>
+    <body>
+        #{doLayout /}
+    </body>
+</html>

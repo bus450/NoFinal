@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Slivr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Slivr">
+    <meta name="author" content="William Hockey and Zach Perret">
+
+        <link rel="stylesheet" href="@{'/public/stylesheets/bootstrap.css'}">
+
+        <style type="text/css">
+	      body {
+	        padding-top: 60px;
+	        padding-bottom: 40px;
+	      }
+	    </style>
+
+	
+		<script src="@{'/public/javascripts/jquery-1.7.2.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+		<script src="@{'/public/javascripts/scroll.js'}"></script>
+		
+		<script language=JavaScript>
+		function swapImage() {
+		theImages = new Array(
+		"/public/images/lillyback.jpg", 
+		"/public/images/lillyback.jpg", 
+		"/public/images/lillyback.jpg");
+		
+		whichImage = Math.floor(Math.random()*theImages.length);
+		document.write('<img src="' +theImages[whichImage]+ '">');
+
+		}
+		</script>
+
+		#{get 'moreScripts' /}
+		
+		<script language=jQuery>
+			$("#body").scroll( function() {
+			    var value = $(this).scrollTop();
+			  if ( value > 120 )
+			   
+
+			});​
+		</script>	
+
+    </head>
+    <body>
+        
+	    <div class="navbar navbar-fixed-top" id="topbar">
+	      <div class="navbar-inner">
+	        <div class="container">
+	
+	          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </a>
+	        
+	          <div class="nav-collapse" id="navbar">
+
+	            <ul class="nav">
+				<li><a id ="topbar" href = "#topbar"><img src="/public/images/slivr.png" href="#topbar"></img></a></li>
+	 			  <li class = "nonimage"><a  id = "active" href="#HowWeWork">What?!</a></li>
+	              <li class = "nonimage"><a id = "aboutlink" href="#Vision">What technologies?</a></li>
+				  <li class = "nonimage"><a id = "aboutlink" href="#AboutUs">Who supports this?</a></li>
+	              <li class = "nonimage"><a id= "signuplink" href="#topbar">Support us!</a></li>
+	            </ul>
+	          </div><!--/.nav-collapse -->
+	        </div>
+	      </div>
+	    </div>
+
+	    <div class="container-fluid">
+
+	      <!-- Main hero unit for a primary marketing message or call to action -->
+		<div class="hero-incapsulate">
+	      	<div class="hero-unit">
+				<div class= "hero-image">
+					<script language=JavaScript>
+					swapImage();
+					</script>
+					<h1>Hi Professor Thomas.</br>
+					We'd like an alternative to a final.</h1>
+					<div class=h2back>
+					<h2>We have some pretty good ideas. </br>
+						Scroll down for some more details. </br> 
+						If you're a student, add your to support!</h2>
+					</div>
+					<form class ="formwhere" action="@{Application.submitUser}" method="POST">
+	   				 	<fieldset> 
+		  			 		<div class="field">         
+		            			<input id="email" type="text" name="email" onfocus="if(this.value == 'Name here!') { this.value = ''; }" value="Name here!"/>
+								<input type="submit" class="submit" value="No Final!" />
+		        			</div>	
+						</fieldset> 
+					</form>
+					
+				</div>
+		    </div>
+		</div>
+	      <!-- Actual Information... -->
+	<div id="main-wrapper">
+	      <div id="content" class="rowcont">
+	      	<div class="row-fluid">
+				<div class="span12">
+				<div class="row-fluid">
+		        <div class="span13" id="HowWeWork">
+		          <h2>Why shouldn't we have a final?</h2>
+		           <p>Well first off, this guy <img src="/public/images/dominic.jpg" ></img> is awesome. He's our professor for one of the best classes at Emory, Business 450. We've had a great semester and it would put a fantastic finish to an awesome class and semester if we did not have to take a written final. Plus, we aren't to sure if tests are the best ways to validate everything we've learned. </br> Also this site itself exhibits a lot of the information we've learned this year....check it out by clicking the link below!</p>
+
+			<a href="#Vision"><div  class ="next">Wait really? That's so cool, show me!</div></a>
+		<div  class ="pline"></div>
+		        </div>
+				       <div class="span13" id="Vision">
+				          <h2>Technologies?</h2>
+				           <div id="stinks">Oh yeah...this page is chalk full of them!</div>
+
+						
+						<p><a href="http://www.playframework.org"><img src="/public/images/play.png" ></img></a>First off this page was created using the Play! Framework. Its an  <b> open source </b>  framework built using the Java Language. Its like Ruby on Rails...except we get to code in Java instead of Ruby! </br> </br> 
+						<a href="http://www.heroku.com"><img src="/public/images/heroku.png" ></img></a>We're hosted on Heroku, which hosts all our information on the  <b> "cloud" </b> , actually we're just using a single Amazon EC2 cluster....but you get the point. </br> </br> 
+							<a href="http://www.heroku.com/pricing"><img src="/public/images/herokufree.jpg" ></img></a>Heroku is also based on a  <b> freemium </b>  business model! (We're just using the free package...so please don't dos attack us...an apologies for the slowness)</br> </br> 
+								<a href="http://twitter.github.com/bootstrap/"><img src="/public/images/twitter.jpeg" ></img></a>Some of the CSS is taken from, and the scaffolding of the layout is built using the  <b> open source project </b>  Twitter Bootstrap </br></br> 
+									<a href="https://github.com/bus450/NoFinal"><img src="/public/images/github.png" ></img></a>All this code is <b>  open source </b> , and can be viewed and downloaded on our Github!  <b> Group collaboration and networking effects  </b> at its finest...</br></br> 
+									<a href="http://www.playframework.org"><img src="/public/images/play.png" ></img></a>We're spreading the word via all sorts of cool networks, trying to use  <b> network effects </b> as efficiently as possible! Plus a bunch of people are contributing to this project...</p>
+									<a href="#AboutUs"><div  class ="next">Lets go to the about...</div></a>
+						<div  class ="pline"></div>
+				          
+				       </div>
+				        <div class="span13" id="AboutUs">
+				          <h2>Who supports this?</h2>
+				         <p> So far these people have shown their support to this project!</p>
+						<ul>
+							#{list items:users, as:'user'}
+							<li>
+								${user.name}
+							</li>
+							#{/list}
+						</ul>
+	
+				<div id="stinks"></br></br>Hand coded with love @JavaMonkey in the ATL</div><p>
+
+						<div  class ="pline"></div>
+				        </div>
+				
+						
+		 
+		  </div>
+		</div>
+		 </div>
+		</div>
+	      <hr>
+
+	      <footer>
+	       
+	      </footer>
+
+	    </div> <!-- /container -->
+</div> <!--main wrapper -->
+<script src="@{'/public/javascripts/bootstrap-alert.js'}"></script>
+<script src="@{'/public/javascripts/bootstrap-modal.js'}"></script>
+<script src="@{'/public/javascripts/bootstrap-dropdown.js'}"></script>
+<script src="@{'/public/javascripts/bootstrap-scrollspy.js'}"></script>
+<script src="@{'/public/javascripts/bootstrap-tab.js'}"></script>
+<script src="@{'/public/javascripts/bootstrap-tooltip.js'}"></script>
+<script src="@{'/public/javascripts/bootstrap-popover.js'}"></script>
+<script src="@{'/public/javascripts/bootstrap-button.js'}"></script>
+<script src="@{'/public/javascripts/bootstrap-collapse.js'}"></script>
+<script src="@{'/public/javascripts/bootstrap-carousel.js'}"></script>
+<script src="@{'/public/javascripts/bootstrap-typeahead.js'}"></script>
+    </body>
+</html>

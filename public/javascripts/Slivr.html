@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:9000/#topbar -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Slivr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+        <link rel="stylesheet" href="http://localhost:9000/public/stylesheets/bootstrap.css">
+
+        <style type="text/css">
+	      body {
+	        padding-top: 60px;
+	        padding-bottom: 40px;
+	      }
+	    </style>
+
+	
+		<script src="./Slivr_files/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script><style type="text/css"></style>
+		<script src="./Slivr_files/scroll.js"></script>
+		
+		<script language="JavaScript">
+		function swapImage() {
+		theImages = new Array(
+		"/public/images/lillyback.jpg", 
+		"/public/images/lillyback.jpg", 
+		"/public/images/lillyback.jpg");
+		
+		whichImage = Math.floor(Math.random()*theImages.length);
+		document.write('<img src="' +theImages[whichImage]+ '">');
+
+		}
+		</script>
+
+				
+		<script language="jQuery">
+			$("#body").scroll( function() {
+			    var value = $(this).scrollTop();
+			  if ( value > 120 )
+			   
+
+			});​
+		</script>	
+
+    </head><link rel="stylesheet" type="text/css" href="data:text/css,">
+    <body>
+        
+	    <div class="navbar navbar-fixed-top" id="topbar">
+	      <div class="navbar-inner">
+	        <div class="container">
+	
+	          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </a>
+	        
+	          <div class="nav-collapse" id="navbar">
+
+	            <ul class="nav">
+				<li><img src="./Slivr_files/slivr.png" href="#topbar"> </li>
+	 			  <li><a id="active" href="http://localhost:9000/#HowWeWork">How we work</a></li>
+	              <li><a id="aboutlink" href="http://localhost:9000/#Vision">Vision</a></li>
+				  <li><a id="aboutlink" href="http://localhost:9000/#AboutUs">About us</a></li>
+	              <li><a id="signuplink" href="./Slivr_files/Slivr.html">Sign up</a></li>
+	            </ul>
+	          </div><!--/.nav-collapse -->
+	        </div>
+	      </div>
+	    </div>
+
+	    <div class="container-fluid">
+
+	      <!-- Main hero unit for a primary marketing message or call to action -->
+		<div class="hero-incapsulate">
+	      	<div class="hero-unit">
+				<div class="hero-image">
+					<script language="JavaScript">
+					swapImage();
+					</script><img src="./Slivr_files/lillyback.jpg">
+					<h1>Your data is valuable.<br>
+					Get rewarded for it.</h1>
+					<div class="h2back">
+					<h2>Brands need data to make decisions. <br>
+						Slivr collects the data you already 
+						generate. <br> 
+						You get cash for your daily purchases.</h2>
+					</div>
+					<form class="formwhere" action="http://localhost:9000/" method="POST">
+	   				 	<fieldset> 
+		  			 		<div class="field">         
+		            			<input id="email" type="text" name="email" onfocus="if(this.value == &#39;get some Slivr&#39;) { this.value = &#39;&#39;; }" value="get some Slivr">
+								<input type="submit" class="submit" value="Submit">
+		        			</div>	
+						</fieldset> 
+					</form>
+					
+				</div>
+		    </div>
+		</div>
+	      <!-- Actual Information... -->
+	<div id="main-wrapper">
+	      <div id="content" class="rowcont">
+	      	<div class="row-fluid">
+				<div class="span12">
+				<div class="row-fluid">
+		        <div class="span13" id="HowWeWork">
+		          <h2>How we work</h2>
+		           <p>We’re built on the same systems as major banks and credit card processors. (actually we’re a little more secure, but who’s counting).  </p>
+
+				<img src="./Slivr_files/slivrhowitworks.png" href="#topbar">
+		          <p><a class="btn" href="http://localhost:9000/#">View details »</a></p>
+		        </div>
+				       <div class="span13" id="Vision">
+				          <h2>Vision</h2>
+				           <p>Advertising stinks
+
+						Big companies spend a lot of money trying to reach their customers, but they don’t have the info to do it effectively. Slivr collects the data you generate online and in stores and lets you sell it back to these companies. Together we can get rid of pointless ads and give you more content you actually care about...and you get some cash in the meantime. </p>
+				          <p><a class="btn" href="http://localhost:9000/#">View details »</a></p>
+				       </div>
+				        <div class="span13" id="AboutUs">
+				          <h2>About us</h2>
+				         <p> We’re startup guys with data on the brain. We’ve both got backgrounds in online security, marketing, and credit card processing so we’ve seen how broken the system really is. Slivr was built to fix our favorite (read: most frustrating) problems and we’re excited for you to help.
+
+						If you’ve got something to say, we’d love to hear from you (seriously). Drop us a line at hey@getslivr.com.</p>
+				          <p><a class="btn" href="http://localhost:9000/#">View details »</a></p>
+				        </div>
+
+		 
+		  </div>
+		</div>
+		 </div>
+		</div>
+	      <hr>
+
+	      <footer>
+	        <p>Made in NYC; spiritually guided by CopperDog. Slivr © 2012. </p>
+	      </footer>
+
+	    </div> <!-- /container -->
+</div> <!--main wrapper -->
+<script src="./Slivr_files/bootstrap-alert.js"></script>
+<script src="./Slivr_files/bootstrap-modal.js"></script>
+<script src="./Slivr_files/bootstrap-dropdown.js"></script>
+<script src="./Slivr_files/bootstrap-scrollspy.js"></script>
+<script src="./Slivr_files/bootstrap-tab.js"></script>
+<script src="./Slivr_files/bootstrap-tooltip.js"></script>
+<script src="./Slivr_files/bootstrap-popover.js"></script>
+<script src="./Slivr_files/bootstrap-button.js"></script>
+<script src="./Slivr_files/bootstrap-collapse.js"></script>
+<script src="./Slivr_files/bootstrap-carousel.js"></script>
+<script src="./Slivr_files/bootstrap-typeahead.js"></script>
+    
+
+</body></html>
